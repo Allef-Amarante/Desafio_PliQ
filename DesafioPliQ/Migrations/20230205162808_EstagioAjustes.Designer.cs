@@ -3,14 +3,16 @@ using DesafioPliQ.AppDbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DesafioPliQ.Migrations
 {
     [DbContext(typeof(EstagiosDbContext))]
-    partial class EstagiosDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230205162808_EstagioAjustes")]
+    partial class EstagioAjustes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

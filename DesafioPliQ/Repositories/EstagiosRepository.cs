@@ -50,7 +50,7 @@ namespace DesafioPliQ.Repositories
 
         public async Task<IEnumerable<EstagiosCRM>> ListOrder()
         {
-            return await _Context.Estagios.OrderBy(c => c.Sequencia).ToListAsync();
+            return await _Context.Estagios.OrderBy(c => c.Priority).ToListAsync();
         }
 
         public async Task<EstagiosCRM> Update(EstagiosCRM estagios)
