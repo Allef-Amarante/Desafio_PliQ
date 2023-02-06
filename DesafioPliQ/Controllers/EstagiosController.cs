@@ -81,12 +81,8 @@ namespace DesafioPliQ.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<EstagiosCRM>> Update(int id, EstagiosCRM estagios)
+        public async Task<ActionResult<EstagiosCRM>> Update(EstagiosCRM estagios)
         {
-            if (id != estagios.Id)
-            {
-                return BadRequest($"O Id: {id}, não existente. Por favor, nos passe um Estagio Existente");
-            }
             return Ok(await _Repository.Update(estagios));
         }
 

@@ -54,7 +54,12 @@ namespace DesafioPliQ.Repositories
         }
 
         public async Task<EstagiosCRM> Update(EstagiosCRM estagios)
-        {
+        {   
+
+            if(!_Context.Estagios.Any(e => e.Id == estagios.Id))
+            {
+                throw new Exception();
+            }
             _Context.Entry(estagios).State = EntityState.Modified;
             await _Context.SaveChangesAsync();
             return estagios;
